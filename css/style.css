@@ -4,7 +4,9 @@
     box-sizing:border-box;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .section1 {
 	background-color: #f9c9c9;
@@ -15,13 +17,18 @@
 }
 
 .congratulation-text {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 230%;
-  color:#98018c;
+  color:#7D1909;
   margin-top:10%;
   display: none;
 }
 
+.message-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
 
 
 
@@ -116,7 +123,6 @@ img {
 .success-area {
   display: none;
 }
-
 
 
 /* Polaroids */
