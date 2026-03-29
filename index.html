@@ -202,48 +202,13 @@
 				</div>
 				<p>All I Want To Say is ^^</p>
 				<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-  <!-- 🎶 YouTube Video (start muted, autoplay) -->
-<iframe id="ytplayer"
-    src="https://www.youtube.com/embed/3AtDnEC4zak?start=3&loop=1&playlist=3AtDnEC4zak&autoplay=1&mute=1&playsinline=1"
+  <iframe 
+    src="https://www.youtube.com/embed/3AtDnEC4zak?start=3&loop=1&playlist=3AtDnEC4zak&playsinline=1"
     style="position:absolute;top:0;left:0;width:100%;height:100%;"
     frameborder="0"
-    allow="autoplay; encrypted-media"
+    allow="encrypted-media"
     allowfullscreen>
-</iframe>
-
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>
-function blastConfetti() {
-    var duration = 2500;
-    var end = Date.now() + duration;
-    (function frame() {
-        confetti({ particleCount: 6, angle: 60, spread: 60, origin: { x: 0 } });
-        confetti({ particleCount: 6, angle: 120, spread: 60, origin: { x: 1 } });
-        if (Date.now() < end) requestAnimationFrame(frame);
-    })();
-}
-
-// Call this function when unlock is correct
-function triggerEmotionalPeak() {
-    // 1️⃣ slight pause (tension)
-    setTimeout(function() {
-        // 2️⃣ text fades in slowly
-        document.querySelector('.congratulation-text').style.display = 'block';
-    }, 500);
-
-    // 3️⃣ show content & confetti
-    setTimeout(function() {
-        document.querySelector('.success-area').style.display = 'block';
-        blastConfetti();
-    }, 1500);
-
-    // 4️⃣ music starts exactly at emotional peak
-    setTimeout(function() {
-        var iframe = document.getElementById("ytplayer");
-        iframe.src = iframe.src.replace("mute=1", "mute=0");
-    }, 2000);
-}
-</script>
+  </iframe>
 </div>
 			</div>
 		</div>
