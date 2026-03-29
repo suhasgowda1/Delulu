@@ -1,23 +1,57 @@
-*{
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+/* ================= FONTS ================= */
+
+/* Import Google Fonts (change these as you like) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Font Variables (EDIT ONLY HERE) */
+:root {
+  --heading-font: 'Courgette', cursive;
+  --body-font: "Patrick Hand", cursive;
+  --fancy-font: 'Pacifico', cursive;
+  --button-font: "Patrick Hand", cursive;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-.section1 {
-	background-color: #f9c9c9;
+/* Apply Fonts */
+body {
+  font-family: var(--body-font);
 }
 
-.section2 {
-	background-color: #f9c9c9;
+.section1 h2, .section2 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2 {
+  font-family: var(--heading-font);
 }
 
 .congratulation-text {
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: var(--fancy-font);
+}
+
+.message-text {
+  font-family: var(--body-font);
+}
+
+.section1 button.pink {
+  font-family: var(--button-font);
+}
+
+
+/* ================= REST OF YOUR CSS ================= */
+
+* {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.section1 {
+  background-color: #f9c9c9;
+}
+
+.section2 {
+  background-color: #f9c9c9;
+}
+
+.congratulation-text {
   font-size: 230%;
   color:#7D1909;
   margin-top:10%;
@@ -25,17 +59,18 @@
 }
 
 .message-text {
-  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   line-height: 1.6;
 }
 
-
-
 .section1 button.pink {
-	background-color: #ff88f5;
-  font-family: 'Playball';
+  background-color: #ff88f5;
   font-size: 30px;
+}
+
+.section1 button.pink:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 105, 180, 0.6);
 }
 
 img.fix-size {
@@ -51,68 +86,40 @@ img.fix-size {
   height:130px;
   display: none;
   overflow: hidden;
-
 }
 
-
-
 .section1 .login-form {
-	position:absolute;
-    top:0;
-    right:0;
-    left:0;
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
 }
 
 img {
-	width:100%;
-	height: auto;
+  width:100%;
+  height: auto;
 }
 
-@font-face {
- font-family: 'DBHX';
- src: url('../fonts/DB Helvethaica X v3.2.eot');
- /* IE9 Compat Modes */
- src: url('../fonts/DB Helvethaica X v3.2.eot?#iefix') format('embedded-opentype'), url('../fonts/DB Helvethaica X v3.2.woff') format('woff'), url('../fonts/DB Helvethaica X v3.2.ttf') format('truetype'), url('../fonts/DB Helvethaica X v3.2.svg#d6a7d8571348c8a262e7f05953d42d15') format('svg');
- /* Legacy iOS */
- font-style: normal;
- font-weight: 400;
-}
-
-
-.section5,
-.section3 {
+.section5, .section3 {
   background-color: #ffe4fd;
 }
 
-.section6 h2,
-.section4 h2,
-.section2 h2 {
+.section6 h2, .section4 h2, .section2 h2 {
   color:#E366B5;
 }
 
-.section3 .paragraph,
-.section5 .paragraph {
+.section3 .paragraph, .section5 .paragraph {
   color:#860049;
 }
 
-
-.section3 h2,
-.section5 h2
-{
+.section3 h2, .section5 h2 {
   color: #860049;
 }
 
-
-.section1 h2,
-.section3 h2,
-.section4 h2,
-.section5 h2,
-.section6 h2,
-.section2 h2 {
+.section1 h2, .section3 h2, .section4 h2, .section5 h2, .section6 h2, .section2 h2 {
   padding-top:40px;
-	font-family: 'Fredoka One', cursive;
-	font-size: 64px;
-	text-align: center;
+  font-size: 64px;
+  text-align: center;
 }
 
 .paragraph {
@@ -123,7 +130,6 @@ img {
 .success-area {
   display: none;
 }
-
 
 /* Polaroids */
 
@@ -159,25 +165,20 @@ img {
   color: #686B70;
   font-size: 18px;
   position: relative;
-  -webkit-transform-origin: top center;
   transform-origin: top center;
-  -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 }
 
-
 .polaroids ul li a.shake {
-  -webkit-animation-duration: 4500ms;
   animation-duration: 4500ms;
-  -webkit-animation-name: pola;
   animation-name: pola;
-  -webkit-transition-timing-function: cubic-bezier(0.655, 0.000, 0.005, 1.000);
   transition-timing-function: cubic-bezier(0.655, 0.000, 0.005, 1.000);
 }
 
-.polaroids ul a:after { content: attr(title) }
+.polaroids ul a:after {
+  content: attr(title);
+}
 
 .polaroids ul img {
   display: block;
@@ -185,35 +186,16 @@ img {
   margin-bottom: 12px;
 }
 
-@-webkit-keyframes pola {
-from { -webkit-transform: rotate(0deg) }
-10%  { -webkit-transform: rotate(3deg) }
-20%  { -webkit-transform: rotate(-3deg)}
-30%  { -webkit-transform: rotate(2deg) }
-40%  { -webkit-transform: rotate(-2deg) }
-50%  { -webkit-transform: rotate(1deg) }
-60%  { -webkit-transform: rotate(-1deg) }
-70%  { -webkit-transform: rotate(0.5deg) }
-80%  { -webkit-transform: rotate(-0.5deg) }
-90%  { -webkit-transform: rotate(0.2deg) }
-to   { -webkit-transform: rotate(0deg) }
-}
 @keyframes pola {
-from { -moz-transform: rotate(0deg) }
-10%  { -moz-transform: rotate(3deg) }
-20%  { -moz-transform: rotate(-3deg)}
-30%  { -moz-transform: rotate(2deg) }
-40%  { -moz-transform: rotate(-2deg) }
-50%  { -moz-transform: rotate(1deg) }
-60%  { -moz-transform: rotate(-1deg) }
-70%  { -moz-transform: rotate(0.5deg) }
-80%  { -moz-transform: rotate(-0.5deg) }
-90%  { -moz-transform: rotate(0.2deg) }
-to   { -moz-transform: rotate(0deg) }
-
-
-
-
-
-
+  from { transform: rotate(0deg) }
+  10%  { transform: rotate(3deg) }
+  20%  { transform: rotate(-3deg)}
+  30%  { transform: rotate(2deg) }
+  40%  { transform: rotate(-2deg) }
+  50%  { transform: rotate(1deg) }
+  60%  { transform: rotate(-1deg) }
+  70%  { transform: rotate(0.5deg) }
+  80%  { transform: rotate(-0.5deg) }
+  90%  { transform: rotate(0.2deg) }
+  to   { transform: rotate(0deg) }
 }

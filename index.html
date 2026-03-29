@@ -23,7 +23,7 @@
 				<div class="row">
 				<img class="fixed-image" src="img/hbd.png" alt="">
 				<div class="columns medium-12 wow fadeIn"
-                data-wow-duration="2s" data-wow-delay="0.1s">
+                data-wow-duration="2s" data-wow-delay="0.5s">
 
 				<p class="message-text">
 						Happy Birthday…
@@ -113,10 +113,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="columns medium-6 paragraph wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 paragraph wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s">
 					Do you remember our first talk? We spoke for almost an hour… I was a little shy at the beginning, but after that I didn’t even realize how fast time was passing. It just felt easy, like I could keep talking without thinking twice. Sometimes I still think about that moment, and honestly, I wish I could have something like that every day in my life. ^_^
 				</div>
-				<div class="columns medium-6 text-center wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 text-center wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.3s">
 					<div class="polaroids">
 					  	<ul>
 						    <li>
@@ -137,10 +137,10 @@
 			</div>
 			<div class="row">
 
-				<div class="columns medium-6 wow paragraph fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 wow paragraph fadeInRight" data-wow-duration="2s" data-wow-delay="0.8s">
 					"Even though we talked and laughed, I guess everything has its end, right… and that day came for us too. Not because you were rude to me, but because some of your words hurt me more than I expected, especially coming from you. I always wanted to see you smiling, I loved that little dimple on your cheeks, and somewhere I wished I could be the reason behind that smile. But I understand now… I’m not the person you’re looking for. So maybe the best thing I can do is take a step back and stay away, even if it’s not easy for me."
 				</div>
-				<div class="columns medium-6 text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.8s">
 					<div class="polaroids">
 					  	<ul>
 						    <li>
@@ -160,10 +160,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="columns medium-6 wow paragraph fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 wow paragraph fadeInLeft" data-wow-duration="2s" data-wow-delay="0.10s">
 					I love the little dimple on your cheeks, your perfect eyes, those cute rabbit teeth, and that small nose pin you wear. When you leave your hair open, you look really beautiful. And especially when you put that small bindi with a touch of kumkum, it just adds something extra that catches attention. That simple chain on your neck, your earrings one above the other… everything about you feels so effortlessly nice. Even your small, slightly childish voice and the way you behave—it all just makes you naturally charming, the kind that anyone would notice.<3
 				</div>
-				<div class="columns medium-6 text-center wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 text-center wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.10s">
 					<div class="polaroids">
 					  	<ul>
 						    <li>
@@ -184,12 +184,12 @@
 			</div>
 			<div class="row">
 
-				<div class="columns medium-6 wow paragraph fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 wow paragraph fadeInRight" data-wow-duration="2s" data-wow-delay="0.20s">
 					One last thing… I still like you the same way I did before. I understand your fears, and I respect them. If you ever feel like smiling freely again, I’ll always be there for you. And if not, I’ll still respect how you feel.
 
           Happy birthday once again, I hope this year brings you a lot more peace and genuine happiness 🤍
 				</div>
-				<div class="columns medium-6 text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s">
+				<div class="columns medium-6 text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.10s">
 					<div class="polaroids">
 					  	<ul>
 						    <li>
@@ -317,5 +317,16 @@
 
       })();
     </script>
+    <script>
+    $('.code').on('input keydown', function (e) {
+  if (e.type === 'input' && this.value.length === 1) {
+    $(this).closest('.columns').next().find('.code').focus();
+  }
+
+  if (e.type === 'keydown' && e.key === 'Backspace' && this.value === '') {
+    $(this).closest('.columns').prev().find('.code').focus();
+  }
+});
+</script>
 </body>
 </html>
